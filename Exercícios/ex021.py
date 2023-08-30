@@ -1,6 +1,3 @@
-import pygame
+from playsound import playsound
 
-pygame.init()
-pygame.mixer.load()
-pygame.mixer.music.play()
-pygame.event.wait()
+playsound("C:/Users/User/Documents/GitHub/Lista-Python/Exercícios/ex021.mp3")
