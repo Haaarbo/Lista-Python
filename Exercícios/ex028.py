@@ -6,7 +6,7 @@ n = int(input('Adivinhe no número que pensei... '))
 sleep(3)
 
 if n == computador:
-    print('\CERTO')
+    print('\nCERTO')
 else:
     print('\nERRADO')
 
