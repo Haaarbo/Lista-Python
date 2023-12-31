@@ -1,29 +1,43 @@
-aluno = {'nome': str(input('Nome: ')),
-         'media': float(input('Média: '))}
+aluno = {'nome': str(input('Qual o nome do aluno?\n')),
+         'media': float(input('Qual a média do aluno?\n'))
+}
 
-if aluno['media'] >= 7:
-    aluno['situacao'] = 'APROVADO'
+if aluno['media'] < 5:
+    print(f'O aluno {aluno["nome"]} está REPROVADO por conta da sua média {aluno["media"]}')
+elif aluno['media'] > 7:
+    print(f'O aluno {aluno["nome"]} está APROVADO por conta da sua média {aluno["media"]}')
 else:
-    aluno['situacao'] = 'REPROVADO'
-    
-print(f'O aluno {aluno["nome"]} possui a média {aluno["media"]}, portanto, está {aluno["situacao"]}!')
+    print(f'O aluno {aluno["nome"]} está DE RECUPERAÇÃO por conta da sua média {aluno["media"]}')
+
+
+for k, v in aluno.items():
+    print(f'{k} é {v}')
 
 '''dicionario = dict()
 dicionario = {'nome': 'Abrahão',
               'idade': 21,
               'sexo': 'M'
               }
-dicionario['isWake'] = True
+//no código acima, é criado um dicionário, em seguida de sua estrutura, contendo um atributo 'nome', 'idade' e 'sexo',
+//e atribuindo a estes os valores 'Abrahão', 21, e 'M', respectivamente.
 
-print(dicionario['nome'])
+dicionario['isWake'] = True
+//adiciona uma parte chamada 'isWake' e atribui um valor 'True' a este
+
+print(dicionario['nome']) //printa 
 print(dicionario['isWake'])
-del dicionario['isWake']
+del dicionario['isWake'] //elimina o elemento 'isWake' e seu valor
 print(f'O {dicionario["nome"]} tem {dicionario["idade"]}.')
 
 print(dicionario.values()) #pega os VALORES
 print(dicionario.keys()) #pega os nomes dos CAMPOS
 print(dicionario.items()) #pega AMBOS
 
+/*É possível usar os dicionários em ciclos for, como no exemplo abaixo:
+n -> indica a chave, isto é, o nome do campo, por exemplo, 'nome'
+i -> indica o valor atribuído à chave, isto é, 'Abrahão', por exemplo
+dicionario.items() -> função que puxa os elementos/chaves e seus respectivos valores
+*/
 for n, i in dicionario.items():
     print(f'{n} -> {i}')
 

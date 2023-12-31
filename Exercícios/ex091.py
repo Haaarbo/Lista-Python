@@ -13,8 +13,14 @@ for k, v in resultados.items(): #acessa o dicionario resultado
     print(f'{k} jogou o dado e tirou {v}!')
     sleep(1)
 
-print(f'{"RANKING":-^29}')
+print(f'{"RANKING":-^29}') 
+#: inicia a formatação, 
+#- é o caractere a ser repetido, 
+#^ centraliza o termo, 
+#29 é a qtd de caracteres que deve ser feita a operação
+
 ordem = sorted(resultados.items(), key=itemgetter(1), reverse=True)
+
 for pos, valores in enumerate(ordem):
     print(f'{pos+1}º lugar: {valores[0]} com {valores[1]} no dado!')
     sleep(1)
